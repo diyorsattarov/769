@@ -10,7 +10,9 @@ add_executable(test_main
 	test_main.cpp
 )
 
-target_link_libraries(test_main PRIVATE stdc++)
+find_package(Qt5 REQUIRED COMPONENTS Widgets)
+
+target_link_libraries(test_main PRIVATE Qt5::Widgets)
 
 add_custom_target(clean_test
     COMMAND ${CMAKE_COMMAND} -E remove_directory ${CMAKE_BINARY_DIR}/test/bin
