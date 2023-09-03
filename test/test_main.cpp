@@ -1,30 +1,31 @@
 #include <QApplication>
 #include <QtWidgets>
-#include <QMainWindow>
 
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
     QWidget window;
 
-    QLabel *queryLabel = new QLabel(QApplication::translate("nestedlayouts", "Query:"));
-    QLineEdit *queryEdit = new QLineEdit();
-    QTableView *resultView = new QTableView();
+    // Create a 8x8 grid layout for the chessboard
+    QGridLayout *chessboardLayout = new QGridLayout;
 
-    QHBoxLayout *queryLayout = new QHBoxLayout();
-    queryLayout->addWidget(queryLabel);
-    queryLayout->addWidget(queryEdit);
+    // Create QLabel widgets for the chessboard squares
+    for (int row = 0; row < 8; ++row) {
+        for (int col = 0; col < 8; ++col) {
+            QLabel *square = new QLabel();
+            if ((row + col) % 2 == 0) {
+                square->setStyleSheet("background-color: white;");
+            } else {
+                square->setStyleSheet("background-color: black;");
+            }
+            square->setFixedSize(50, 50); // Adjust the size as needed
+            chessboardLayout->addWidget(square, row, col);
+        }
+    }
 
-    QVBoxLayout *mainLayout = new QVBoxLayout();
-    mainLayout->addLayout(queryLayout);
-    mainLayout->addWidget(resultView);
-    window.setLayout(mainLayout);
-    
+    window.setLayout(chessboardLayout);
+    window.setWindowTitle("Chessboard");
+    window.show();
 
-    window.setWindowTitle(
-        QApplication::translate("nestedlayouts", "Nested layout"));
-    
-    window.show(); // Show the window
-
-    return app.exec(); // Start the Qt event loop
+    return app.exec();
 }
