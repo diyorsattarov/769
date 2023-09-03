@@ -40,8 +40,9 @@ int main(int argc, char *argv[])
 
             // Add chess pieces with styled text
             QString pieceText = "";
-            bool isBluePiece = row < 2; // First two rows are for blue pieces
-            if (isBluePiece) {
+            bool isBluePiece = row == 1; // Second row is for blue pieces
+            bool isRedPiece = row == 6;  // Second-to-last row is for red pieces
+            if (isBluePiece || isRedPiece) {
                 pieceText = "P"; // Pawn
             } else if ((row == 0 || row == 7) && (col == 0 || col == 7)) {
                 pieceText = "R"; // Rook
@@ -55,7 +56,7 @@ int main(int argc, char *argv[])
                 pieceText = "K"; // King
             }
             
-            QLabel* pieceLabel = createPieceLabel(pieceText, isBluePiece);
+            QLabel* pieceLabel = createPieceLabel(pieceText, isBluePiece || isRedPiece);
             chessboardLayout->addWidget(pieceLabel, row, col);
         }
     }
