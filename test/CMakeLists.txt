@@ -6,11 +6,14 @@ set(CMAKE_CXX_STANDARD 11)  # Set your desired C++ standard here
 
 set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR}/test/bin)
 
+find_package(Qt5 REQUIRED COMPONENTS Widgets)
+set(CMAKE_AUTOMOC ON)  # Add this line to enable moc for Qt classes
+
 add_executable(test_main
 	test_main.cpp
 )
 
-find_package(Qt5 REQUIRED COMPONENTS Widgets)
+
 
 target_link_libraries(test_main PRIVATE Qt5::Widgets)
 
