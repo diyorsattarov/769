@@ -1,47 +1,23 @@
-# Chessboard GUI using Qt
+              GLWTS(Good Luck With That Shit) Общественная Лицензия
+                      Copyright (c) Все блять, кроме Автора
 
-This is a simple Qt application that creates a chessboard GUI with brown and light brown squares. You can use this as a starting point to build a chess game or any other application that requires a chessboard-like interface.
+Всем разрешается копировать, распространять, изменять, совмещать, продавать,
+публиковать, сублицензировать или творить любую другую хуйню с этим кодом
+на СВОЙ СТРАХ и РИСК.
 
-## Prerequisites
+Автор абсолютно нихуя не понимает в предназначении данного кода.
+Он может сработать, а может и нет - автору не ебет.
 
-- CMake (Version 3.2 or higher)
-- Qt 5 (Widgets component)
 
-## Building the Application
+                    "УДАЧИ С ЭТОМ ДЕРЬМОМ" ОБЩЕСТВЕННАЯ ЛИЦЕНЗИЯ
+          УСЛОВИЯ И ПОЛОЖЕНИЯ ДЛЯ КОПИРОВАНИЯ, РАСПРОСТРАНЕНИЯ И ИЗМЕНЕНИЯ
 
-1. Create a build directory (e.g., `build`) in the root of this project.
-2. Open a terminal and navigate to the build directory.
-3. Run CMake to configure the project and generate build files:
+  0. Делайте ЛЮБУЮ ХУЙНЮ, ВЗБРЕДУЩУЮ ВАМ В ГОЛОВУ до тех пор, пока ВЫ НЕ ОСТАВЛЯЕТЕ
+УЛИК ДЛЯ НАХОЖДЕНИЯ АВТОРА оригинального продукта, чтобы обвинить его или заставить
+взять на себя ответственность.
 
-```
-cmake ..
-```
-Build the application using a build tool (e.g., make on Linux):
+НИ ПРИ КАКИХ ОБСТОЯТЕЛЬСТВАХ АВТОРЫ НЕ НЕСУТ ОТВЕТСТВЕННОСТИ ЗА ПРЕТЕНЗИИ,
+УБЫТКИ ИЛИ ДРУГИЕ ОТВЕТСТВЕННОСТИ, ПОДНЯТЫЕ ВО ВРЕМЯ КОНТРАКТА И ВЫЗВАННЫЕ
+ПРЯМОЙ ИЛИ КОСВЕННОЙ СВЯЗЬЮ С ПРОГРАММНЫМ ОБЕСПЕЧЕНИЕМ.
 
-```
-make
-```
-Run the application:
-
-```
-./test_main
-```
-
-## Directory Structure
-test: Contains the source code for the chessboard GUI.
-CMakeLists.txt: The root CMake configuration file.
-test/CMakeLists.txt: CMake configuration for the test application.
-## Cleaning
-You can clean the build files using the following commands:
-
-### Clean the test application build:
-
-```
-make clean_test
-```
-### Clean all build files (including test):
-```
-make clean_all
-```
-## License
-This project is licensed under the MIT License - see the LICENSE file for details.
+Удачи, и храни тебя Господь.
